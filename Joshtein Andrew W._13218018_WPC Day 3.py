@@ -4,8 +4,7 @@ import random
 broker_address="io.adafruit.com"
 clientId="Joshtein Publish" 
 ADAFRUIT_IO_USERNAME = "Joshtein"
-ADAFRUIT_IO_KEY = "aio_Zmqv79FOAkDSSaz5Kuzxo0cZTvir"
-topic = "Test"
+ADAFRUIT_IO_KEY = "aio_pzuY25t2vUfCFiu68t0JclLhP7G8"
 topic_1 = "Sensor Suhu" 
 topic_2 = "Sensor Kelembaban"
 
@@ -18,7 +17,6 @@ k = random.uniform(65.00, 85.00)
 
 while True:
     #publish
-    client.publish(ADAFRUIT_IO_USERNAME+"/feeds/"+topic,"OFF")
     client.publish(ADAFRUIT_IO_USERNAME+"/feeds/"+topic_1,t)
     client.publish(ADAFRUIT_IO_USERNAME+"/feeds/"+topic_2,k)
     time.sleep(1800)
